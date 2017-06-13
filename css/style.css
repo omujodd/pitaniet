@@ -62,8 +62,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar-collapse  {
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
+.navbar-header {
+  margin-bottom: 29px;
+}
+
 #fh5co-header > .navbar {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;

@@ -394,76 +394,76 @@
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
 	<script src="js/jquery.waypoints.min.js"></script>
-	 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
 	<!-- Main JS -->
-	 <script>
-    var myMap;
+	<script>
+		var myMap;
 
     // Дождёмся загрузки API и готовности DOM.
     ymaps.ready(init);
     var markerIcon = {
-            iconLayout: 'default#image',
-              iconImageHref: 'images/marker1.png',
-            iconImageSize: [50, 60],
-            iconImageOffset: [-25, -30]
-        };
+    	iconLayout: 'default#image',
+    	iconImageHref: 'images/marker1.png',
+    	iconImageSize: [50, 60],
+    	iconImageOffset: [-25, -30]
+    };
 
-    	function setMarkerCenterM(m){
-    		myMap.setCenter(m.geometry._coordinates);
-    		myMap.setZoom(15);
+    function setMarkerCenterM(m){
+    	myMap.setCenter(m.geometry._coordinates);
+    	myMap.setZoom(15);
 
-    	}
-        function setMarkerCenter(e){
-             myMap.setCenter(e.get('target').geometry._coordinates)
-             myMap.setZoom(15);
-        } 
+    }
+    function setMarkerCenter(e){
+    	myMap.setCenter(e.get('target').geometry._coordinates)
+    	myMap.setZoom(15);
+    } 
 
     function init() {
         // Создание экземпляра карты и его привязка к контейнеру с
         // заданным id ("map").
         myMap = new ymaps.Map('map', {
-            
-            center: [59.88, 30.34],
-            zoom: 11,
-             controls: ['zoomControl', 'fullscreenControl']
+
+        	center: [59.88, 30.34],
+        	zoom: 11,
+        	controls: ['zoomControl', 'fullscreenControl']
         }, {
-            searchControlProvider: 'yandex#search'
+        	searchControlProvider: 'yandex#search'
         });
 
         st1 = new ymaps.Placemark([59.923942, 30.383574], {
-            hintContent: 'Невский пр., д.  175  (Вместимость: 60 человек)',
+        	hintContent: 'Невский пр., д.  175  (Вместимость: 60 человек)',
 /*            balloonContent: 'Инфа по клику'
-        */        }, markerIcon);
+*/        }, markerIcon);
 
         st2 = new ymaps.Placemark([59.925498, 30.379316], {
-            hintContent: 'Невский пр., д. 151  (Вместимость: 50 человек)',
+        	hintContent: 'Невский пр., д. 151  (Вместимость: 50 человек)',
 /*            balloonContent: 'Инфа по клику'
-        */        }, markerIcon);
+*/        }, markerIcon);
 
         st3 = new ymaps.Placemark([59.924609, 30.286844], {
-            hintContent: 'Ул. Декабристов, д. 43  (120 человек)',
-            /*balloonContent: 'Инфа по клику'*/
+        	hintContent: 'Ул. Декабристов, д. 43  (120 человек)',
+        	/*balloonContent: 'Инфа по клику'*/
         }, markerIcon);
 
         st4 = new ymaps.Placemark([59.832317, 30.339215], {
-            hintContent: 'Московское шоссе д. 7  (Торговый двор) (80 человек)',
-           /* balloonContent: 'Инфа по клику'*/
+        	hintContent: 'Московское шоссе д. 7  (Торговый двор) (80 человек)',
+        	/* balloonContent: 'Инфа по клику'*/
         }, markerIcon);
 
         st5 = new ymaps.Placemark([59.891011, 30.387679], {
-            hintContent: 'Ул. Салова д. 52  (Вместимость: 400 человек)',
-            /*balloonContent: 'Инфа по клику'*/
+        	hintContent: 'Ул. Салова д. 52  (Вместимость: 400 человек)',
+        	/*balloonContent: 'Инфа по клику'*/
         }, markerIcon);
 
         st6 = new ymaps.Placemark([59.945089, 30.351224], {
-            hintContent: 'Ул. Фурштатская, д. 7  (Вместимость: 120 человек)',
-           /* balloonContent: 'Инфа по клику'*/
+        	hintContent: 'Ул. Фурштатская, д. 7  (Вместимость: 120 человек)',
+        	/* balloonContent: 'Инфа по клику'*/
         }, markerIcon);
 
-         markersObj = {
-     	'st1':st1,'st2':st2,'st3':st3,'st4':st4,'st5':st5,'st6':st6
-     	}   
+        markersObj = {
+        	'st1':st1,'st2':st2,'st3':st3,'st4':st4,'st5':st5,'st6':st6
+        }   
         myMap.geoObjects
         .add(st1)
         .add(st2)
@@ -490,9 +490,17 @@
     		}
     	})
     })
-    </script>
+</script>
+<script>
+	$(function(){
+		$('.navbar-collapse').on('click','a',function(e) {
+				$('.navbar-header .js-fh5co-nav-toggle').trigger('click');
+			
+		});
+	});
+</script>
 
-	<script src="js/main.js"></script>
+<script src="js/main.js"></script>
 
 
 </body>
