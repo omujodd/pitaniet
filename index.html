@@ -152,7 +152,7 @@
 
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
 								<figure>
-									<img src="images/user.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+									<img src="images/profile.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
 								</figure>
 								<h3>Константин Дятлов</h3>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -160,7 +160,7 @@
 							</div>
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
 								<figure>
-									<img src="images/user_2.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+									<img src="images/profile_2.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
 								</figure>
 								<h3>Вася Петров</h3>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -169,7 +169,7 @@
 							<div class="clearfix visible-sm-block visible-xs-block"></div>
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
 								<figure>
-									<img src="images/user_3.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+									<img src="images/profile_3.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
 								</figure>
 								<h3>Петя Иванов</h3>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -177,7 +177,7 @@
 							</div>
 							<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-staff to-animate">
 								<figure>
-									<img src="images/user.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+									<img src="images/profile_4.png" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
 								</figure>
 								<h3>Коля Сидоров</h3>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
@@ -218,7 +218,7 @@
 							</div>
 							<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 ">
 								<figure>
-									<img src="images/user_2.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+									<img src="images/user_3.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
 								</figure>
 								<h3>Невский пр., д. 151</h3>
 								<p>М. Александра Невского<br>
@@ -228,7 +228,7 @@
 							</div>
 							<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 ">
 								<figure>
-									<img src="images/user.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+									<img src="images/user_5.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
 								</figure>
 								<h3>Ул. Декабристов, д. 43</h3>
 								<p>М. Василеостровская, Адмиралтейская, Садовая<br>
@@ -238,7 +238,7 @@
 							</div>
 							<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 ">
 								<figure>
-									<img src="images/user_2.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+									<img src="images/user_4.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
 								</figure>
 								<h3>Московское шоссе д. 7 (Торговый двор)</h3>
 								<p>М. Звёздная, Московская<br>
@@ -248,7 +248,7 @@
 							</div>
 							<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 ">
 								<figure>
-									<img src="images/user.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+									<img src="images/user_2.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
 								</figure>
 								<h3>Ул. Салова д. 52</h3>
 								<p>М. Волковская, Бухарестская<br>
@@ -258,7 +258,7 @@
 							</div>
 							<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 ">
 								<figure>
-									<img src="images/user_2.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
+									<img src="images/user_6.jpg" alt="Free HTML5 Template by FREEHTML5.co" class="img-responsive">
 								</figure>
 								<h3>Ул. Фурштатская д. 7</h3>
 								<p>М. Чернышевская<br>
@@ -494,7 +494,9 @@
 <script>
 	$(function(){
 		$('.navbar-collapse').on('click','a',function(e) {
+			if($('.navbar-collapse').hasClass('in')){
 				$('.navbar-header .js-fh5co-nav-toggle').trigger('click');
+			}
 			
 		});
 	});
