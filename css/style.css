@@ -95,19 +95,19 @@ h1, h2, h3, h4, h5, h6 {
   color: #e32929;
 }
 #fh5co-header .navbar-brand {
-  text-transform: uppercase;
-  letter-spacing: 2px;
   font-size: 20px;
-  font-weight: 400;
   margin-left: 0px;
   display: block;
   padding: 0;
-  font-family: "Roboto Slab", arial, sans-serif;
   background: #e32929;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-family: "Roboto Slab", arial, sans-serif;
   color: #fff;
 }
 #fh5co-header .navbar-brand img{
-  max-width: 100px;
+  max-width: 80px;
 }
 #fh5co-main {
   clear: both;
