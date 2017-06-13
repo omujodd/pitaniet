@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Примеры. Размещение карты на странице.</title>
+    <!--
+        Подключаем API карт
+        Если вы используете API локально, то в URL ресурса необходимо указывать протокол в стандартном виде (http://...)
+    -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script>
+    var myMap;
+
+    // Дождёмся загрузки API и готовности DOM.
+    ymaps.ready(init);
+    var markerIcon = {
+            iconLayout: 'default#image',
+              iconImageHref: 'images/marker1.png',
+            iconImageSize: [50, 60],
+            iconImageOffset: [-25, -30]
+        };
+    function init() {
+        // Создание экземпляра карты и его привязка к контейнеру с
+        // заданным id ("map").
+        myMap = new ymaps.Map('map', {
+            
+            center: [59.88, 30.34],
+            zoom: 11
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+
+        st1 = new ymaps.Placemark([59.923942, 30.383574], {
+            hintContent: 'Невский пр., д.  175  (Вместимость: 60 человек)',
+/*            balloonContent: 'Инфа по клику'
+        */        }, markerIcon);
+
+        st2 = new ymaps.Placemark([59.925498, 30.379316], {
+            hintContent: 'Невский пр., д. 151  (Вместимость: 50 человек)',
+/*            balloonContent: 'Инфа по клику'
+        */        }, markerIcon);
+
+        st3 = new ymaps.Placemark([59.924609, 30.286844], {
+            hintContent: 'Ул. Декабристов, д. 43  (120 человек)',
+            /*balloonContent: 'Инфа по клику'*/
+        }, markerIcon);
+
+        st4 = new ymaps.Placemark([59.832317, 30.339215], {
+            hintContent: 'Московское шоссе д. 7  (Торговый двор) (80 человек)',
+           /* balloonContent: 'Инфа по клику'*/
+        }, markerIcon);
+
+        st5 = new ymaps.Placemark([59.891011, 30.387679], {
+            hintContent: 'Ул. Салова д. 52  (Вместимость: 400 человек)',
+            /*balloonContent: 'Инфа по клику'*/
+        }, markerIcon);
+
+        st6 = new ymaps.Placemark([59.945089, 30.351224], {
+            hintContent: 'Ул. Фурштатская, д. 7  (Вместимость: 120 человек)',
+           /* balloonContent: 'Инфа по клику'*/
+        }, markerIcon);
+
+        function setMarkerCenter(e){
+             myMap.setCenter(e.get('target').geometry._coordinates)
+             myMap.setZoom(14);
+        }
+
+        myMap.geoObjects
+        .add(st1)
+        .add(st2)
+        .add(st3)
+        .add(st4)
+        .add(st5)
+        .add(st6)
+
+        st1.events.add('click',setMarkerCenter)
+        st2.events.add('click',setMarkerCenter)
+        st3.events.add('click',setMarkerCenter)
+        st4.events.add('click',setMarkerCenter)
+        st5.events.add('click',setMarkerCenter)
+        st6.events.add('click',setMarkerCenter)
+
+    }
+    </script>
+    <style>
+    body,
+    html {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    #map {
+        width: 100%;
+        height: 90%;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+</body>
+
+</html>
